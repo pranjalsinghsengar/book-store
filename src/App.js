@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Banner from "./containers/banner";
+import Book from "./containers/book";
+import CreateBooks from "./containers/createBooks";
+import { useContext } from "react";
+import { BookContext } from "./context";
+import Header from "./containers/header";
+import Layout from "./layout/layout";
+import Home from "./page/home";
+import BookRouter from "./router";
 
 function App() {
+  // const books = [
+  //   {
+  //     type: "candy",
+  //     title: "Think Like a Monk: Train Your Mind for Peace and...",
+  //     author: "shivam sengar",
+  //     price: "599",
+  //     img: "2.jpg",
+  //   },
+  //   {
+  //     type: "candy",
+  //     title: "Think Like a Monk: Train Your Mind for Peace and...",
+  //     author: "shivam sengar",
+  //     price: "599",
+  //     img: "2.jpg",
+  //   },
+  // ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <BookRouter />
+      {/* <Home />   */}
+    </Layout>
   );
 }
 
